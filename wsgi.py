@@ -10,7 +10,7 @@ application = Flask(__name__)
 def write_into_log():
     with open("/mnt/logs/log.txt", "a") as f:
         f.write(
-            "%s: Request processed by %s" %
+            "%s: Request processed by %s\n" %
             (datetime.datetime.now(), socket.gethostname())
         )
 
